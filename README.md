@@ -2,6 +2,10 @@
 
 Snippets of more obscure Vue.js experiences @ POLITICO, captured in quick code demos & explanations
 
-## [Sample Use Case: Doing This Thing w/ Vue](https://codepen.io/)
+## [Compile Vue.js templates on the Fly](https://codepen.io/ivan-shtyrliaev/pen/NWGdLYx)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis quam et massa consectetur dictum. Duis luctus, orci nec vulputate porta, turpis mauris euismod urna, at hendrerit purus sapien vel risus. Vestibulum in odio ut arcu molestie efficitur non vel nulla.
+**Note! Only available in the full build.**  
+Sometimes you may end up needing to compile a template on the fly. For example, you get HTML code from your back-end server with inner links and you don't want your site to reload clicking on that links. Normally, you would have router-link component. But here it's just tag link "a"
+
+    <a href="/some/inner/path">SomeLink</a>
+Using v-html does not allow you to do this. In this case, you need to change links to router-link components and compile HTML string
